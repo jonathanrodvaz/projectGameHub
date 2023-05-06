@@ -1,34 +1,13 @@
-import { printTemplate as Pokemon } from './pages/Pokemon/Pokemon';
-import { printTemplate as Anime} from './pages/Anime/Anime';
-import { printTemplate as Manga } from './pages/Manga/Manga';
-import { printTemplate as Login } from './pages/Login/Login';
-import { printTemplate as Dashboard} from './pages/Dashboard/Dashboard';
 import './style.css';
 
-//Exportamos un initcontent, que gestionará las rutas dentro del dashboard
-export const initContent = (route) => {
-  switch (key) {
-    //En este case accederemos al localstorage para comprar si hay un user en la base de datos. Si lo hay, entonces nos pinta la dashboard. Sino, no continua. Esto sería la primera pagina, login.
-    case undefined:
-      localStorage.getItem("user") ? Dashboard() : Login()
-      break;
-    case "Pokemon":
-      Pokemon();
-      break;
-    case "Manga":
-      Manga();
-      break;
-    case "Anime":
-      Anime();
-      break;
-    case "Login":
-        Login();
-        break;  
-    case "Dashboard":
-        Dashboard();
-        break;
-  
-  }
-} 
+//Primero inyectamos el template con el header, main y footer.
+import { initTemplate } from './utils/initTemplate';
+//Utilizo  una función con un switch para controlar que pagina se va a renderizar. 
+import { initControler } from './utils/router';
 
-initContent();
+
+
+initTemplate();
+
+//Inicializo el controlador de las paginas en el caso undefined. El initControler es una función que se encarga de controlar las diferentes paginas de nuestra aplicacion, gestiona que se renderiza y que no. El primer caso es el caso de autentificación(Login)
+initControler();
