@@ -3,7 +3,7 @@ import { printTemplate as Dashboard} from '../pages/Dashboard/Dashboard';
 import { printTemplate as Login } from '../pages/Login/Login';
 import { printTemplate as Pokemon } from '../pages/Pokemon/Pokemon';
 import { printTemplate as Anime} from '../pages/Anime/Anime';
-import { printTemplate as Manga } from '../pages/Manga/Manga';
+import { printTemplate as Memory } from '../pages/Memory/Memory';
 
 
 // Esta función se encarga de controlar que partes de la aplicación se renderizán. 
@@ -16,8 +16,8 @@ export const initControler = (route) => {
       case "Pokemon":
         Pokemon();
         break;
-      case "Manga":
-        Manga();
+      case "Memory":
+        Memory();
         break;
       case "Anime":
         Anime();

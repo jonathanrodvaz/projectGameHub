@@ -6,8 +6,10 @@ import "./Login.css"
 
 //Creamos función template
 
-const template = () => `<input type="text" name="" id="">
+const template = () => `<div class="form">
+<input type="text" name="user" placeholder="Como te llamas? :)">
 <button id="buttonLogin" alt="introduce tu nombre aquí para entrar!">Insert Coin!</button>
+</div>
 `
 
 //Creamos los eventos de nuestros elementos html

@@ -1,9 +1,9 @@
 //Importamos los estilos de la hoja de estilos correspondiente. 
-import "./Manga.css"
+import "./Memory.css"
 
 //Creamos función template
 
-const template = () => `Estoy en Manga`
+const template = () => `Estoy en Memory`
 
 //Creamos los eventos de nuestros elementos html
 

@@ -9,20 +9,20 @@ const template = () => `
     <ul>
         <li>
              <figure id="figurePokemon" class="figureDashboard">
-                <img src="https://res.cloudinary.com/dxemfv61t/image/upload/v1683391677/pngegg_ztewnq.png" 
-                alt="Clicka aquí para acceder a la página PokeApi"
+                <img src="https://res.cloudinary.com/dxemfv61t/image/upload/v1683530910/pokemon-pokedex-pikachu_gbfaaa.webp" 
+                alt="Clicka aquí para acceder a la página Pokedex"
                 id="imgPokemon" 
                 />
-                <h2>Pokemon</h2>
+                <h2>Pokédex</h2>
             </figure>    
         </li>
         <li>
                  <figure id="figureManga" class="figureDashboard">
             <img src="https://sm.ign.com/ign_es/feature/t/the-top-25/the-top-25-greatest-anime-characters-of-all-time_sypg.jpg" 
             alt="Clicka aquí para acceder a"
-            id="imgManga"
+            id="imgMemory"
             />
-            <h2>Manga</h2>
+            <h2>Memory</h2>
         </figure>    
         </li>
         <li>
@@ -47,9 +47,9 @@ const addListeners = () =>{
         imgPokemon.addEventListener("click", ()=>{
             initControler("Pokemon");
         })
-    const imgManga = document.getElementById("imgManga");
-        imgManga.addEventListener("click", ()=>{
-            initControler("Manga");
+    const imgMemory = document.getElementById("imgMemory");
+        imgMemory.addEventListener("click", ()=>{
+            initControler("Memory");
         })
     const imgAnime = document.getElementById("imgAnime");
         imgAnime.addEventListener("click", ()=>{
