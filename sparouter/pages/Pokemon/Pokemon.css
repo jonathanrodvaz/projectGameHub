@@ -1,10 +1,18 @@
 .figurePokemon{
     width: 200px;
+    height: 280px;
+    border: 1px solid black;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
 
+}
+
+.imgPokemon{
+    height: 200px;
+   
 }
 
 .galleryPokemon{
@@ -12,4 +20,73 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
+}
+
+
+.grass{
+    background-color: #63bb5b;
+}
+
+.bug{
+    background-color: #90c12c;
+}
+
+.dark{
+    background-color: #5a5366;
+}
+
+.dragon{
+    background-color: #0a6dc4;
+}
+
+.electric{
+    background-color: #f3d23b;
+}
+
+.fairy{
+    background-color: #ec8fe6;
+}
+
+.fire{
+    background-color: #ff9c54;
+}
+
+.flying{
+    background-color: #8fa8dd;
+}
+
+.ghost{
+    background-color: #5269ac;
+}
+
+.ground{
+    background-color: #d97746;
+
+}
+
+.ice{
+    background-color: #4ec8e7;
+}
+.normal{
+    background-color: #9099a1;
+}
+.poison{
+    background-color: #ab6ac8;
+}
+
+.psychic{
+    background-color: #f97176;
+}
+
+.rock{
+    background-color: #c7b78b;
+}
+
+.steel{
+    background-color: #5a8ea1;
+}
+
+.water{
+     background-color: #4d90d5;
 }

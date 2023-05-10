@@ -1,3 +1,7 @@
+:root{
+  --primary-color: #e8dada;
+}
+
 #containerDashboard {
   width: 100vw;
   display: flex;
@@ -30,20 +34,11 @@
   height: 280px;
   object-fit: cover;
   border-radius: 10%;
-  -webkit-box-shadow: 7px 8px 30px -3px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: 7px 8px 30px -3px rgba(0, 0, 0, 0.42);
-  box-shadow: 7px 8px 30px -3px rgba(0, 0, 0, 0.42);
 }
-
-.figureDashboard img:hover {
-   
--webkit-box-shadow: 7px 8px 27px 0px rgba(8,239,3,1);
--moz-box-shadow: 7px 8px 27px 0px rgba(8,239,3,1);
-box-shadow: 7px 8px 27px 0px rgba(8,239,3,1);
-}
-
 
 .figureDashboard h2 {
   font-size: 35px;
   padding: 10px;
+  color: var(--primary-color);
+
 }

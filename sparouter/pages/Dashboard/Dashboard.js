@@ -18,20 +18,11 @@ const template = () => `
         </li>
         <li>
                  <figure id="figureManga" class="figureDashboard">
-            <img src="https://sm.ign.com/ign_es/feature/t/the-top-25/the-top-25-greatest-anime-characters-of-all-time_sypg.jpg" 
-            alt="Clicka aquí para acceder a"
+            <img src="../assets/confused-2.jpg"
+            alt="Clicka aquí para acceder al juego de Memoria"
             id="imgMemory"
             />
             <h2>Memory</h2>
-        </figure>    
-        </li>
-        <li>
-            <figure id="figureAnime" class="figureDashboard">
-                <img src="https://res.cloudinary.com/dxemfv61t/image/upload/v1683224285/the-top-25-greatest-anime-characters-of-all-time_sypg_xsr9qo.jpg" 
-                alt="Clicka aquí para acceder a"
-                id="imgAnime"
-                />
-                <h2>Anime</h2>
         </figure>    
         </li>
        
@@ -51,10 +42,7 @@ const addListeners = () =>{
         imgMemory.addEventListener("click", ()=>{
             initControler("Memory");
         })
-    const imgAnime = document.getElementById("imgAnime");
-        imgAnime.addEventListener("click", ()=>{
-            initControler("Anime");
-        })
+    
 
 }
 

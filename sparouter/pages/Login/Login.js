@@ -7,7 +7,7 @@ import "./Login.css"
 //Creamos función template
 
 const template = () => `<div class="form">
-<input type="text" name="user" placeholder="Como te llamas? :)">
+<input type="text" name="user" placeholder="Hola! Como te llamas? :)">
 <button id="buttonLogin" alt="introduce tu nombre aquí para entrar!">Insert Coin!</button>
 </div>
 `
