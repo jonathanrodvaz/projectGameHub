@@ -7,7 +7,10 @@ import "./Pokemon.css"
 let dataServicePokemon
 const template = () => 
 `<div id="pokemon"> 
-    <input type="text" id="inputPokemon"/>
+    <div id='pokemon'>
+    <div id='containerFilter'>
+        <div id='filterButton'></div>
+    <input type="text" id="inputPokemon" placeholder='Introduce un Pokemon...'/>
 <div class="galleryPokemon"></div>
 </div>`;
 
@@ -18,6 +21,7 @@ const dataService = async (data)=>{
     
     dataServicePokemon = data;
     createAndPrintFigure(dataServicePokemon)
+   
     
 }
 //Función general que nos va a servir para pintar tanto los pokemon del filter como los de la data
@@ -25,7 +29,8 @@ const createAndPrintFigure = (data) =>{
 document.querySelector(".galleryPokemon").innerHTML = "";
     //Mapeamos la data para crear un figure de cada elemento que mandaremos a inyectar a la galeria
    
-    data.pokemonData.map((pokemon)=> {
+    data.map((pokemon)=> {
+        
     const classCustomType = `"figurePokemon ${pokemon.type[0].type.name}"`;
     const templateFigure = `
     <figure class=${classCustomType}>
@@ -55,11 +60,28 @@ const filterPokemon = (valueInput) => {
     );
     createAndPrintFigure(filterData);
 };
+
+//PIntar los botones de los filtros de cada tipo de pokemon
+
+const printButtons = (types) => {
+    types.forEach((type) => {
+        
+
+        //Si queremos hacer un template dentro de un template, tenemos que hacer una constante.
+        const idCustom = `Type ${type[0].toUpperCase()+ type.slice(1)}`
+        const buttonType = `<button class='buttonFilter ${type}' id=${idCustom}>${type}</button>`
+        const filterButton = document.getElementById('filterButton');
+        filterButton.innerHTML += buttonType;
+    });
+}
+
+
 //Pintamos el template
 
 export const printTemplate = (data) => {
      const {type, dataPokemon} = data
     document.querySelector("main").innerHTML = template();
     dataService(dataPokemon);
+    printButtons(type);
     addListeners();
 }

@@ -11,13 +11,14 @@ import { dataApp } from './dataGlobal';
 export const initControler = async (route) => {
 //Con esta linea ayudamos a la performance de la pokeApi, junto con la funcion de la linea 39
   const { pokemonData } = await dataApp();
+  console.log(pokemonData)
     switch (route) {
       //En este case accederemos al localstorage para comprar si hay un user en la base de datos. Si lo hay, entonces nos pinta la dashboard. Sino, no continua. Esto sería la primera pagina, login.
       case undefined:
         localStorage.getItem("user") ? Dashboard() : Login()
         break;
       case "Pokemon":
-        Pokemon(await dataApp());
+        Pokemon(pokemonData);
         break;
       case "Memory":
         Memory();

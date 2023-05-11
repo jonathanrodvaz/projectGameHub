@@ -15,6 +15,14 @@
    
 }
 
+#filterButton{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 .galleryPokemon{
     display:flex;
     flex-wrap: wrap;
@@ -23,8 +31,14 @@
     
 }
 
-
-.grass{
+#containerFilter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+ .grass{
     background-color: #63bb5b;
 }
 
@@ -32,11 +46,11 @@
     background-color: #90c12c;
 }
 
-.dark{
+ .dark{
     background-color: #5a5366;
 }
 
-.dragon{
+ .dragon{
     background-color: #0a6dc4;
 }
 
@@ -44,49 +58,49 @@
     background-color: #f3d23b;
 }
 
-.fairy{
+ .fairy{
     background-color: #ec8fe6;
 }
 
-.fire{
+ .fire{
     background-color: #ff9c54;
 }
 
-.flying{
+ .flying{
     background-color: #8fa8dd;
 }
 
-.ghost{
+ .ghost{
     background-color: #5269ac;
 }
 
-.ground{
+ .ground{
     background-color: #d97746;
 
 }
 
-.ice{
+ .ice{
     background-color: #4ec8e7;
 }
-.normal{
+ .normal{
     background-color: #9099a1;
 }
-.poison{
+ .poison{
     background-color: #ab6ac8;
 }
 
-.psychic{
+ .psychic{
     background-color: #f97176;
 }
 
-.rock{
+ .rock{
     background-color: #c7b78b;
 }
 
-.steel{
+ .steel{
     background-color: #5a8ea1;
 }
 
-.water{
+ .water{
      background-color: #4d90d5;
 }
