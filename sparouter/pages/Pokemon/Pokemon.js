@@ -4,7 +4,8 @@ import "./Pokemon.css"
 
 
 //Creamos función template
-let dataServicePokemon
+let dataServicePokemon;
+let typeGlobal;
 const template = () => 
 `<div id="pokemon"> 
     <div id='pokemon'>
@@ -37,7 +38,6 @@ document.querySelector(".galleryPokemon").innerHTML = "";
         <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon" />
         <h2>${pokemon.name}</h2>
         <h3>${pokemon.type[0].type.name}</h3>
-        <h4>${pokemon.name.height}</h4>
     </figure>
     `;
     //Una vez creado el figure se lo inyectamos a la galeria con un += para que vaya sumando a lo que ya tiene
@@ -50,16 +50,50 @@ const addListeners = () =>{
     const inputPokemon = document.getElementById("inputPokemon");
     inputPokemon.addEventListener("input", (e)=>{
         
-        filterPokemon(e.target.value)
+        filterPokemon(e.target.value, "name")
     })
+//Metemos el evento de los botones de filtrado
+
+typeGlobal.forEach((type)=>{
+    const buttonType = document.querySelector(`.${type}`);
+   
+    buttonType.addEventListener('click', ()=>{
+        filterPokemon(type, "type")
+    })
+
+})
+
 }
+
 //variable para hacer que el buscador filtre según el input que introduzcamos.
-const filterPokemon = (valueInput) => {
-    const filterData = dataServicePokemon.filter((pokemon) =>
-    pokemon.name.toLowerCase().includes(valueInput.toLowerCase())
-    );
-    createAndPrintFigure(filterData);
+const filterPokemon = (filtro, donde) => {
+
+    switch (donde) {
+        case "name":{
+            const filterData = dataServicePokemon.filter((pokemon) =>
+            pokemon.name.toLowerCase().includes(filtro.toLowerCase()));
+            createAndPrintFigure(filterData)
+    }
+            break;
+
+        case "type":
+            const AllPokemonFilter = []
+            pokemon.type.forEach((typeArrow, index)=>{
+                const filterData = dataServicePokemon.filter((pokemon)=>{
+                pokemon.type[index].type.name.toLowerCase().includes(filtro.toLowerCase())
+                AllPokemonFilter = [...AllPokemonFilter, ...filterData]
+                });
+
+
+            });
+            
+            createAndPrintFigure(AllPokemonFilter)
+        }
+            break;  
+
+    }
 };
+
 
 //PIntar los botones de los filtros de cada tipo de pokemon
 
@@ -80,6 +114,8 @@ const printButtons = (types) => {
 
 export const printTemplate = (data) => {
      const {type, dataPokemon} = data
+     typeGlobal = type;
+     dataServicePokemon = dataPokemon;
     document.querySelector("main").innerHTML = template();
     dataService(dataPokemon);
     printButtons(type);

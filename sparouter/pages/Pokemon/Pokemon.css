@@ -1,7 +1,6 @@
 .figurePokemon{
     width: 200px;
     height: 280px;
-    border: 1px solid black;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -39,68 +38,113 @@
     gap: 1rem;
 }
  .grass{
+    border: 10px solid #346130;
+    border-radius: 10px;
     background-color: #63bb5b;
 }
 
 .bug{
+    border: 10px solid #465e16;
+    border-radius: 10px;
     background-color: #90c12c;
 }
 
- .dark{
+.dark{
+    border: 10px solid #2d2a33;
+    border-radius: 10px;
     background-color: #5a5366;
 }
 
- .dragon{
+.dragon{
+    border: 10px solid #053259;
+    border-radius: 10px;
     background-color: #0a6dc4;
 }
 
 .electric{
+    border: 10px solid #7b6a1f;
+    border-radius: 10px;
     background-color: #f3d23b;
 }
 
- .fairy{
+.fairy{
+    border: 10px solid #855181;
+    border-radius: 10px;
     background-color: #ec8fe6;
 }
 
- .fire{
-    background-color: #ff9c54;
+.fire{
+    border: 10px solid #734108;
+    border-radius: 10px;
+    background-color: #fc8d0e;
 }
 
- .flying{
+.flying{
+    border: 10px solid #303b52;
+    border-radius: 10px;
     background-color: #8fa8dd;
 }
 
- .ghost{
+.ghost{
+    border: 10px solid #212e54;
+    border-radius: 10px;
     background-color: #5269ac;
 }
 
- .ground{
+.ground{
+    border: 10px solid #cc5012;
+    border-radius: 10px;
     background-color: #d97746;
 
 }
 
- .ice{
+.ice{
+    border: 10px solid  #0a3540;
+    border-radius: 10px;
     background-color: #4ec8e7;
 }
- .normal{
+.normal{
+    border: 10px solid #3e4246;
+    border-radius: 10px;
     background-color: #9099a1;
 }
- .poison{
+.poison{
+    border: 10px solid #462754;
+    border-radius: 10px;
     background-color: #ab6ac8;
 }
 
  .psychic{
+    border: 10px solid #773638;
+    border-radius: 10px;
     background-color: #f97176;
 }
 
  .rock{
+    border: 10px solid #6a6148;
+    border-radius: 10px;
     background-color: #c7b78b;
 }
 
  .steel{
+    border: 10px solid #2e4a55;
+    border-radius: 10px;
     background-color: #5a8ea1;
 }
 
  .water{
+    border: 10px solid  #294d71;
+    border-radius: 10px;
      background-color: #4d90d5;
 }
+
+.fighting{
+    border: 10px solid #060a0f;
+    border-radius: 10px;
+    background-color: #a2ab40;
+}
+
+
+
+
+
