@@ -19,6 +19,7 @@
   padding: 0;
   box-sizing: border-box;
   
+  
 }
 
 
@@ -71,7 +72,8 @@ img{
 
 
 main{
+  
   padding-top: 25vh;
-  height: 0vh;
+  min-height: 80vh;
 }
 

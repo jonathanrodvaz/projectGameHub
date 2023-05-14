@@ -37,7 +37,10 @@ document.querySelector(".galleryPokemon").innerHTML = "";
     <figure class=${classCustomType}>
         <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon" />
         <h2>${pokemon.name}</h2>
+        <p>#${pokemon.id}</p>
         <h3>${pokemon.type[0].type.name}</h3>
+        <p>Altura: ${pokemon.height}m</p>
+        <p>Peso: ${pokemon.weight}kg</p>
     </figure>
     `;
     //Una vez creado el figure se lo inyectamos a la galeria con un += para que vaya sumando a lo que ya tiene
@@ -78,11 +81,11 @@ const filterPokemon = (filtro, donde) => {
 
         case "type":
             {
-                
-            const filterData = dataServicePokemon.filter((pokemon) =>
-            pokemon.type[0].type.toLowerCase().includes(filtro.toLowerCase())
+                const filterData = dataServicePokemon.filter((pokemon) =>
+                pokemon.type.toLowerCase().includes(filtro.toLowerCase()));
+                createAndPrintFigure(filterData)
             
-            )
+            
             break;  
             
         }

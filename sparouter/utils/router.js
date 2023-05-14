@@ -2,9 +2,10 @@
 import { printTemplate as Dashboard} from '../pages/Dashboard/Dashboard';
 import { printTemplate as Login } from '../pages/Login/Login';
 import { printTemplate as Pokemon } from '../pages/Pokemon/Pokemon';
-import { printTemplate as Anime} from '../pages/Anime/Anime';
 import { printTemplate as Memory } from '../pages/Memory/Memory';
+import { printTemplate as TresEnRaya} from '../pages/TresEnRaya/tresEnRaya';
 import { dataApp } from './dataGlobal';
+
 
 
 // Esta función se encarga de controlar que partes de la aplicación se renderizán. 
@@ -23,8 +24,8 @@ export const initControler = async (route) => {
       case "Memory":
         Memory();
         break;
-      case "Anime":
-        Anime();
+      case "TresEnRaya":
+        TresEnRaya();
         break;
       case "Login":
           Login();

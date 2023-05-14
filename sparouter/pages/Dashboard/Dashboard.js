@@ -17,7 +17,7 @@ const template = () => `
             </figure>    
         </li>
         <li>
-                 <figure id="figureManga" class="figureDashboard">
+            <figure id="figureManga" class="figureDashboard">
             <img src="../assets/confused-2.jpg"
             alt="Clicka aquí para acceder al juego de Memoria"
             id="imgMemory"
@@ -25,6 +25,15 @@ const template = () => `
             <h2>Memory</h2>
         </figure>    
         </li>
+        <li>
+            <figure id="figureMemory" class="figureDashboard">
+            <img src="https://res.cloudinary.com/dxemfv61t/image/upload/v1684086181/tictac_uqpyw1.png"
+                alt="Clicka aquí para acceder al juego de Tic Tac Toe"
+                id="imgTresEnRaya"
+                    />
+   <h2>Tic Tac Toe 2Players</h2>
+</figure>    
+</li>
        
     </ul>
 </div>
@@ -42,7 +51,10 @@ const addListeners = () =>{
         imgMemory.addEventListener("click", ()=>{
             initControler("Memory");
         })
-    
+    const imgTresEnRaya = document.getElementById("imgTresEnRaya");
+        imgTresEnRaya.addEventListener("click", ()=>{
+            initControler("TresEnRaya");
+        })
 
 }
 

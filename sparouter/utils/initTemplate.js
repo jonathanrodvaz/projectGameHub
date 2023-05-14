@@ -2,6 +2,7 @@
 import { printTemplate as printHeader } from "../components/Header/Header";
 
 
+
 //Hacemos un initTemplate porque cuando nos metemos en html no hay que tocar el div de id "app". Lo inyectamos todos mediante initTemplate, que primero apunto a app, luego crea header, luego crea main, luego crea footer. En ese orden. 
 export const initTemplate = () =>{
 

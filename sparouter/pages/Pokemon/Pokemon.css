@@ -1,11 +1,14 @@
+
+  
 .figurePokemon{
-    width: 200px;
-    height: 280px;
+    width: 230px;
+    height: 350px;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin: 1.5rem;
+    padding:1rem;
 
 }
 
@@ -27,6 +30,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+
     
 }
 
