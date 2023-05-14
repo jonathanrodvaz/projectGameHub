@@ -4,6 +4,7 @@ import { printTemplate as Login } from '../pages/Login/Login';
 import { printTemplate as Pokemon } from '../pages/Pokemon/Pokemon';
 import { printTemplate as Memory } from '../pages/Memory/Memory';
 import { printTemplate as TresEnRaya} from '../pages/TresEnRaya/tresEnRaya';
+import { printTemplate as Quiz} from '../pages/Quiz/Quiz';
 import { dataApp } from './dataGlobal';
 
 
@@ -26,6 +27,9 @@ export const initControler = async (route) => {
         break;
       case "TresEnRaya":
         TresEnRaya();
+        break;
+      case "Quiz":
+        Quiz();
         break;
       case "Login":
           Login();
