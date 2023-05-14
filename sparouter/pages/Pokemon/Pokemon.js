@@ -77,19 +77,16 @@ const filterPokemon = (filtro, donde) => {
             break;
 
         case "type":
-            const AllPokemonFilter = []
-            pokemon.type.forEach((typeArrow, index)=>{
-                const filterData = dataServicePokemon.filter((pokemon)=>{
-                pokemon.type[index].type.name.toLowerCase().includes(filtro.toLowerCase())
-                AllPokemonFilter = [...AllPokemonFilter, ...filterData]
-                });
-
-
-            });
+            {
+                
+            const filterData = dataServicePokemon.filter((pokemon) =>
+            pokemon.type[0].type.toLowerCase().includes(filtro.toLowerCase())
             
-            createAndPrintFigure(AllPokemonFilter)
-        }
+            )
             break;  
+            
+        }
+            
 
     }
 };
