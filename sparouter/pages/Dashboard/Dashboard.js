@@ -18,11 +18,11 @@ const template = () => `
         </li>
         <li>
             <figure id="figureManga" class="figureDashboard">
-            <img src="../assets/confused-2.jpg"
-            alt="Clicka aquí para acceder al juego de Memoria"
+            <img src="https://res.cloudinary.com/dxemfv61t/image/upload/v1684146242/gorgis-gaming_shutterstock_LightField-Studios_rv0kch.jpg"
+            alt="Clicka aquí para acceder al juego Memory-Dog!"
             id="imgMemory"
             />
-            <h2>Memory</h2>
+            <h2>Memory-Dog</h2>
         </figure>    
         </li>
         <li>
@@ -31,16 +31,16 @@ const template = () => `
                 alt="Clicka aquí para acceder al juego de Tic Tac Toe"
                 id="imgTresEnRaya"
                     />
-   <h2>Tic Tac Toe 2Players</h2>
+   <h2>Tres en Raya</h2>
 </figure>    
 </li>
 <li>
              <figure id="figureQuiz" class="figureDashboard">
-                <img src="https://res.cloudinary.com/dxemfv61t/image/upload/v1683530910/pokemon-pokedex-pikachu_gbfaaa.webp" 
-                alt="Clicka aquí para acceder a la página Quiz"
+                <img src="https://res.cloudinary.com/dxemfv61t/image/upload/v1684145939/36337_pokemon-quiz_mjvqi3.jpg" 
+                alt="Clicka aquí para acceder al Poke-Quiz"
                 id="imgQuiz" 
                 />
-                <h2>Quiz Show</h2>
+                <h2>Poke-Quiz</h2>
             </figure>    
         </li>
        

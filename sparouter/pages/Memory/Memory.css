@@ -6,7 +6,6 @@
 
 body{
     height: 100vh;
-   
     background: inherit;
 }
 section.memory-game{
@@ -15,7 +14,8 @@ section.memory-game{
     align-items:flex-end;
 }
 .memory-game {
-    width: 640px;
+    
+    width: 550px;
     height: 500px;
     margin: auto;
     display: flex;

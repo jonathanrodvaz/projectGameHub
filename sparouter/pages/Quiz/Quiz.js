@@ -5,7 +5,7 @@ import "./Quiz.css"
 
 const template = () => `
     <div class='app'>
-        <h1>Simple Quiz</h1>
+        <h1>Bienvenido al Poke-Quiz!</h1>
         <div class='quiz'>
         <h2 id='question'>Question goes here</h2>
         <div id='answer-buttons'>
@@ -27,39 +27,39 @@ const template = () => `
 const addListener = () =>{
  const questions = [
     {
-        question: 'Which is the largest animal in the world?',
+        question: 'Cuantos Pokemon del tipo venenoso existen?',
         answers: [
-            {text: 'Shark', correct: false},
-            {text: 'Blue Whale', correct: true},
-            {text: 'Elephant', correct: false},
-            {text: 'Giraffe', correct: false},
+            {text: 'Existen 18 Pokemon del tipo Venenoso', correct: false},
+            {text: 'Existen 14 Pokemon del tipo Venenoso', correct: true},
+            {text: 'Existen 5 Pokemon del tipo Venenoso', correct: false},
+            {text: 'Existen 12 Pokemon del tipo Venenoso', correct: false},
         ]
     },
     {
-        question: 'Which is the smallest country in the world?',
+        question: 'Cual es el Pokemon más alto?',
         answers: [
-            {text: 'Vatican City', correct: true},
-            {text: 'Bhutan', correct: false},
-            {text: 'Nepal', correct: false},
-            {text: 'Shri Lanka', correct: false},
+            {text: 'Onix', correct: true},
+            {text: 'Dragonair', correct: false},
+            {text: 'Mewtwo', correct: false},
+            {text: 'Gyarados', correct: false},
         ]
     },
     {
-        question: 'Which is the largest desert in the world?',
+        question: 'Antes de aparecer en Pokemon, este Pokemon se ganaba la vida como mascota oficial de La Gula Del Norte. ¿A que Pokemon nos referimos...?',
         answers: [
-            {text: 'Kalahari', correct: false},
+            {text: 'Tentacool', correct: false},
             {text: 'Gobi', correct: false},
-            {text: 'Sahara', correct: false},
-            {text: 'Antarctica', correct: true},
+            {text: 'Mr-Mime', correct: false},
+            {text: 'Tangela', correct: true},
         ]
     },
     {
-        question: 'Which is the smallest continent in the world?',
+        question: 'Que entrañable Pokemon es conocido por no distanciarse de su querido puerro?',
         answers: [
-            {text: 'Asia', correct: false},
-            {text: 'Australia', correct: true},
-            {text: 'Arctic', correct: false},
-            {text: 'Africa', correct: false},
+            {text: 'Slowbro', correct: false},
+            {text: 'Farfetchd', correct: true},
+            {text: 'Jinx', correct: false},
+            {text: 'Kadabra', correct: false},
         ]
     },
  ];
@@ -113,12 +113,51 @@ function selectAnswer(e){
     const isCorrect = selectedBtn.dataset.correct === 'true';
     if(isCorrect){
         selectedBtn.classList.add('correct');
+        //Esta linea de abajo permite que se añada un punto al score si la respuesta seleccionada es correcta.
+        score++;
          }else{
             selectedBtn.classList.add('incorrect');
          }
 
+         //Las siguientes lineas de codigo sirven para señalar la respuesta correcta cuando se ha escogido la respuesta incorrecta
+         Array.from(answerButtons.children).forEach(button => {
+            if(button.dataset.correct === 'true'){
+                button.classList.add('correct')
+            }
+            //Esta linea evita que pulses los botones correspondientes a otras respuestas una vez ya has escogido la respuesta. Así, evita que una vez escogida la respuesta puedas seleccionar otras respuestas. 
+            button.disabled = true;
+         })
+         //Esta linea permite mostrar el botón de siguiente pregunta una vez se ha escogido una respuesta en la pregunta actual.
+         nextButton.style.display = 'block';
+
+}
+//Esta función nos mostrará el score total con un mensaje personalizado en función del score. 
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = 'Play Again!';
+    nextButton.style.display = 'block';
 }
 
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+
+//Las siguientes lineas de codigo son el escuchador de eventos para la funcionalidad del botón next, que permite continuar a la siguiente pregunta (una vez se ha escogido la pregunta correcta.)
+nextButton.addEventListener('click', ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    //Este else permite que tras la ultima pregunta respondida, si pulsamos Next reseteamos el quiz.
+    }else{
+        startQuiz();
+    }
+})
 
 startQuiz();
 

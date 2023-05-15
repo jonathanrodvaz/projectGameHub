@@ -4,10 +4,12 @@ import "./tresEnRaya.css"
 //Creamos función template
 
 const template = () => `
-
+<section id='tresEnRaya'>
         <div id="gameboard"></div>
 
-        <p id="info"></p>`
+        <p id="info"></p>
+        </section>
+        `
 
 
 
